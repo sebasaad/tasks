@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>ToDO</title>
+  <style>
+  .done
+  {
+    text-decoration: line-through;
+  }
+  </style>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="fontawesome.min.css">
+  <link href="fontawesome.min.js">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <script src="vuee.js"></script>
+    <main id="app">
+     <div v-bind:class="{available:available}"><h3>{{ title }}</h3>
+   <form @submit.prevent="addTodo">
+     <label for="newTodo">New ToDo:</label>
+     <input v-model="newTodo" type="text" name="newTodo" id="newTodo">
+    <!-- <input v-model="newTodo" type="file" name="newTodo" @change="imageChanged" >-->
+     <button type="submit">ADD TODO</button>
+   </form>
+   <ul>
+     <li v-for="todo in todos">
+        <img v-bind:src="imgSrc" alt="">
+       <input type="checkbox" v-model="todo.done">
+       <span :class="{ done: todo.done }">{{ todo.title }}</span>
+       <button  @click="removeTodo(todo)">Remove</i></button>
+       
+       
+      </li>
+   </ul>
+  </div>
+  
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="vue.js"></script>
+</body>
+</html>

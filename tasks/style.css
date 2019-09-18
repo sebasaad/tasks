@@ -1,0 +1,35 @@
+h3{
+    color : royalblue;
+    font-size: 40px;
+    padding-left: 40px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+label{
+    padding-left: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input{
+    border-radius: 10px;
+    margin-left: 10px;
+}
+button{
+    border-radius: 10px;
+    background-color: wheat;
+    margin-left: 10px;
+
+}
+
+.padd{
+    margin-left: 50px;
+}
+ul{
+ list-style: none;
+}
+
+img{
+    width: 50px;
+    height: 50px;;
+}
